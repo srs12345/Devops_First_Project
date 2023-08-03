@@ -6,9 +6,9 @@ pipeline {
 
   }
   stages {
-    stage('To Build image') {
+    stage('To access dockefile') {
       steps {
-        sh 'docker build -t ubuntu:3.12.12.1 .'
+        sh 'cd /home/ubuntu/dockerp'
       }
     }
 
