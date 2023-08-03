@@ -20,7 +20,7 @@ pipeline {
 
     stage('To build docker image') {
       steps {
-        sh 'docker build -t myjenkins-blueocean:2.401.3-1 .'
+        sh 'sudo docker build -t myjenkins-blueocean:2.401.3-1 .'
       }
     }
 
