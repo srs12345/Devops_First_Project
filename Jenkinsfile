@@ -12,5 +12,17 @@ pipeline {
       }
     }
 
+    stage('list the files') {
+      steps {
+        sh 'ls -la'
+      }
+    }
+
+    stage('To build docker image') {
+      steps {
+        sh 'docker build -t myjenkins-blueocean:2.401.3-1 .'
+      }
+    }
+
   }
 }
