@@ -1,14 +1,14 @@
 pipeline {
   agent {
     node {
-      label 'Node 1'
+      label 'Node 2'
     }
 
   }
   stages {
     stage('To access dockefile') {
       steps {
-        sh 'cd /home/ubuntu/dockerp'
+        sh 'cd /home/ubuntu/dockerf'
       }
     }
 
