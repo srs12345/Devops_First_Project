@@ -20,7 +20,7 @@ pipeline {
 
     stage('Builed an imag') {
       steps {
-        sh 'docker build . -t my-web-app -f /home/ubuntu/dockerf'
+        sh 'sudo docker build . -t my-web-app -f /home/ubuntu/dockerf'
       }
     }
 
