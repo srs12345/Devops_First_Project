@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('Renaming the image') {
+      steps {
+        sh 'sudo docker tag my-web-app srs12345/devops-first-proj:v1'
+      }
+    }
+
   }
 }
