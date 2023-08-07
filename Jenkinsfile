@@ -20,8 +20,18 @@ pipeline {
     }
 
     stage('Login to the docker hub') {
+      agent {
+        node {
+          label 'Node 1'
+        }
+
+      }
+      environment {
+        DOCKERHUB_USER = 'srs12345'
+        DOCKERHUB_PASSWORD = 'Welcome@123'
+      }
       steps {
-        sh 'sudo docker login'
+        sh 'sudo docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD'
       }
     }
 
