@@ -19,5 +19,11 @@ pipeline {
       }
     }
 
+    stage('Login to the docker hub') {
+      steps {
+        sh 'sudo docker login'
+      }
+    }
+
   }
 }
