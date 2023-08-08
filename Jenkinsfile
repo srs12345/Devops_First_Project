@@ -36,5 +36,12 @@ pipeline {
       }
     }
 
+    stage('Pulling the custom image') {
+      steps {
+        sh '''sudo docker pull srs12345/devops-first-proj:v1
+'''
+      }
+    }
+
   }
 }
