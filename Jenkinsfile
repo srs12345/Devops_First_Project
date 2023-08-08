@@ -43,5 +43,12 @@ pipeline {
       }
     }
 
+    stage('Running the image as a container') {
+      steps {
+        sh '''sudo docker run -d -it --name my_devops_first_project srs12345/devops-first-proj:v1
+'''
+      }
+    }
+
   }
 }
