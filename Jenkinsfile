@@ -29,5 +29,12 @@ pipeline {
       }
     }
 
+    stage('Pushing the image to dockerhub') {
+      steps {
+        sh '''docker push srs12345/devops-first-proj:v1
+'''
+      }
+    }
+
   }
 }
